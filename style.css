@@ -1,4 +1,5 @@
-/* this is the default dark theme from dynalist */
+/* @media screen and (min-width: 511px) {  */
+/* uncomment line above and last line if you only want to affect desktop */
 
 ::selection {
   background: rgba(0, 55, 102, 0.99);
@@ -7,13 +8,13 @@
   background: rgba(0, 55, 102, 0.99);
 }
 body {
-  color: #eee;
+  color: #d4d4d4; /* color for the text of the documents - not notes */
 }
 input,
 textarea,
 select {
   color: #a7a7a7;
-  background-color: #181818;
+  background-color: #3c3c3c; /* background color for inputs like the one in the open document */
   border: 1px solid #444;
 }
 input:focus,
@@ -60,6 +61,7 @@ textarea:focus {
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: initial; /* scrollbars with no rounded corners */
 }
 ::-webkit-scrollbar-thumb:active {
   background-color: rgba(255, 255, 255, 0.3);
@@ -68,7 +70,7 @@ textarea:focus {
   background-color: rgba(255, 255, 255, 0.3);
 }
 .modal {
-  background-color: #181818;
+  background-color: #1e1e1e; /* color modal for settings and confirmation */
   box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
 }
 .page.mod-load-fail {
@@ -88,7 +90,7 @@ textarea:focus {
 }
 .AppHeader {
   color: #a7a7a7;
-  background-color: #1a1a1a;
+  background-color: #333333; /* header color */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 .AppHeader-icon {
@@ -126,7 +128,7 @@ textarea:focus {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 .full-screen-prompt-container {
-  background: #181818;
+  background: #333333; /* color modal for opening files, capture to inbox */
 }
 .finder-result {
   color: #cacaca;
@@ -160,7 +162,7 @@ textarea:focus {
 }
 .ShortcutHelp {
   color: #cacaca;
-  background-color: #181818;
+  background-color: #252526; /* color for the help sidebar */
 }
 .onboarding-page-link {
   box-shadow: inset 0 0 0 1px #444;
@@ -207,26 +209,30 @@ textarea:focus {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 .is-desktop .LeftPaneSplitter:after {
-  border-right: 1px solid #262626;
+  border-right: 1px solid #707070; /* splitter color for the left pane */
 }
-.is-desktop .LeftPaneSlidebarContainer {
-  box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.8);
-}
+/* .is-desktop .LeftPaneSlidebarContainer {
+  box-shadow: 0 2px 3px 2px rgba(112, 112, 112, 0.3); removed shadow for splitter
+} */
 .is-desktop .LeftPaneContainer,
 .is-desktop .Pane {
-  background-color: #181818;
+  background-color: #252526; /* left pane container color */
 }
 .is-desktop .LeftPaneContainer-nav {
-  background: #262626;
+  background: #333333; /* left nav bar color */
   box-shadow: inset 0 0 1px -1px #444;
 }
 .is-desktop .LeftPaneContainer-navItem {
-  background: #262626;
-  color: #cacaca;
+  background: #333333;
+  color: #858585;
 }
 .is-desktop .LeftPaneContainer-navItem.is-active,
 .is-desktop .LeftPaneContainer-navItem:hover {
-  background: #181818;
+  color: #ffffff;
+  background: #333333;
+}
+.is-desktop .LeftPaneContainer-navItem.is-active {
+  border-left: 1px solid #ffffff;
 }
 .is-desktop .Pane-header,
 .is-desktop .popup-message-banner {
@@ -284,7 +290,7 @@ textarea:focus {
   color: #838383;
 }
 .pane-item.DocumentItem.is-open > .pane-item-header {
-  background-color: #343434;
+  background-color: #37373d; /* element of the left pane selected */
 }
 .pane-item-menu-trigger {
   color: #838383;
@@ -296,7 +302,7 @@ textarea:focus {
 .pane-item-header.highlighted,
 .TagPane-tags .pane-item-header:hover {
   color: #eee;
-  background: #003766;
+  background: #37373d; /* elements of the left pane hovered */
 }
 .pane-item-header.selected {
   background: #003766;
@@ -315,7 +321,7 @@ textarea:focus {
 }
 .ContextMenu {
   color: #cacaca;
-  background: #181818;
+  background: #333333; /* color for options when right clicking a file */
   border: 1px solid #444;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
@@ -462,7 +468,7 @@ textarea:focus {
 }
 .keymap-shortcut-combo,
 .KeyboardShortcut {
-  background: #262626;
+  background: #37373d; /* color for the container of the shortcut in the help section */
 }
 .keymap-shortcut-combo-delete {
   color: #838383;
@@ -662,7 +668,7 @@ textarea:focus {
   color: #838383;
 }
 .AppContainer {
-  background-color: #181818;
+  background-color: #1e1e1e; /* document change color */
 }
 .AppContainer.is-borderShowing:not(.is-global-search),
 .AppContainer.is-borderShowing:not(.is-flat-search) {
@@ -674,7 +680,7 @@ textarea:focus {
 }
 .Node-note,
 .Node-renderedNote {
-  color: #cacaca;
+  color: #858585; /* color for notes, same color as line numbers in vscode */
 }
 .Node.mod-loading {
   background-color: #262626;
@@ -706,7 +712,7 @@ textarea:focus {
   background: transparent;
 }
 .Node-children {
-  border-left: 1px solid #444;
+  border-left: 1px solid #707070; /* color of the left lines for children */
 }
 .Node-checkbox:before {
   background: #262626;
@@ -769,7 +775,7 @@ textarea:focus {
   background: rgba(0, 55, 102, 0.6);
 }
 .search-match {
-  background: rgba(255, 255, 0, 0.4);
+  background: #4c2710; /* search match color */
 }
 .node-icon {
   color: #a7a7a7;
@@ -810,8 +816,8 @@ textarea:focus {
   color: #a7a7a7;
 }
 .DocumentTools-overlay {
-  background-color: #181818;
-  box-shadow: 0 0 3px 3px #181818;
+  background-color: #1e1e1e; /* container for search and view icons */
+  box-shadow: 0 0 3px 3px #1e1e1e;
 }
 .view-filter-option-choice.mod-pro-only:after {
   background-color: #343434;
@@ -902,3 +908,5 @@ textarea:focus {
 .mindmap-node.is-checked > .mindmap-content {
   color: #838383;
 }
+
+/* } */
